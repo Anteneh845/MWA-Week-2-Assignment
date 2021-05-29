@@ -1,0 +1,70 @@
+<div class="container mt-4">
+    <form name="addGuitarCtrl.form" class="bg-dark p-4 w-50 m-auto" ng-submit="addGuitarCtrl.addGuitarHandler()">
+        <h2 class="text-center"> Add a guitar</h2>
+        <div class="form-group">
+            <fieldset>
+                <label class="form-label">What's the Brand?</label>
+                <input class="form-control" type="text" placeholder="Brand" name="brand" ng-model="addGuitarCtrl.brand"
+                       ng-minlength="2" maxlength="12" required/>
+                <div ng-class="invalid-feedback"
+                     ng-show="addGuitarCtrl.form.brand.$invalid && addGuitarCtrl.form.brand.$dirty">
+                    Brand name must be a minimum of 2 and maximum of 12 characters
+                </div>
+            </fieldset>
+        </div>
+        <div class="mt-3"></div>
+        <div class="form-group">
+            <fieldset>
+                <label class="form-label">Write a description of the guitar?</label>
+                <textarea class="form-control" type="text" placeholder="Description" name="description" ng-model="addGuitarCtrl.description" ng-minlength="30" maxlength="200" rows="3" required></textarea>
+                <div ng-class="invalid-feedback"  ng-show="addGuitarCtrl.form.description.$invalid && addGuitarCtrl.form.description.$dirty">
+                    Guitar description must be a minimum of 30 and maximum of 200 characters
+                </div>
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <fieldset>
+                <label class="form-label mt-4"> What type is it?</label>
+                <select name="type" ng-model="addGuitarCtrl.type" class="form-control" required>
+                    <option value="Electric" selected> Electric</option>
+                    <option value="Acoustic"> Acoustic</option>
+                    <option value="Classical"> Classical</option>
+                </select>
+            </fieldset>
+        </div>
+
+        <div class="form-group has-danger">
+            <label class="form-label mt-4"> Year </label>
+            <input type="number" class="form-control" placeholder="Year" name="year" ng-model="addGuitarCtrl.year"
+                   ng-pattern="/^(19[5-9]\d|20[0-4]\d|2021)$/" required/>
+            <div ng-show="addGuitarCtrl.form.year.$invalid && addGuitarCtrl.form.year.$dirty"
+                 ng-class="invalid-feedback"> The year must be between 1950
+                to 2021
+            </div>
+        </div>
+
+        <div class="form-group has-danger">
+            <label class="form-label mt-4">String type</label>
+            <select name="stringType" ng-model="addGuitarCtrl.stringType" class="form-control" required>
+                <option value="Steel">Steel</option>
+                <option value="Nylon"> Nylon</option>
+            </select>
+
+        </div>
+
+        <div class="form-group has-danger">
+            <label class="form-label mt-4">Link to Guitar</label>
+            <input type="text" value="wrong value" class="form-control" name="link" ng-model="addGuitarCtrl.link"
+                   placeholder="Link"
+                   ng-pattern="/^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/"
+                   required>
+            <div ng-class="invalid-feedback"
+                 ng-show="addGuitarCtrl.form.link.$invalid && addGuitarCtrl.form.link.$dirty">Enter a valid url
+            </div>
+        </div>
+        <div class="form-group mt-4">
+            <button type="submit" class="btn-primary btn-lg"> Add Guitar</button>  &emsp;
+            <button class="btn-outline-dark btn-lg" ng-click="addGuitarCtrl.cancelHandler()">  Cancel </button>
+        </div>
+    </form>
+</div>

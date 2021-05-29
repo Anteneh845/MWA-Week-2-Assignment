@@ -1,0 +1,20 @@
+<h1> {{gameDetailCtrl.game.title}} </h1>
+{{gameDetailCtrl.game.designers}}
+
+<game-rating stars="gameDetailCtrl.rating" rate="{{gameDetailCtrl.game.rate}}"> </game-rating>
+
+<div>
+    Price: {{gameDetailCtrl.game.price | currency}}
+</div>
+
+<div>
+    Minimum Players :{{gameDetailCtrl.game.minPlayers}}
+</div>
+
+<div>
+    Maximum Players : {{gameDetailCtrl.game.maxPlayers}}
+</div>
+
+<div>
+    Publisher : {{gameDetailCtrl.game.publisher.name}}
+</div>

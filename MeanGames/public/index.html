@@ -1,0 +1,35 @@
+<!Doctype>
+<html ng-app="meanGames">
+
+<head>
+    <title> MEAN Games</title>
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav-bar></nav-bar>
+    <div ng-view > </div>
+    <!-- <h1> MEAN Games homepage</h1>
+    <footer>
+        <a href="https://www.miu.edu" target="_blank">
+            <img src="images/compro-web-logo.webp" alt="ComPro image" width="300" height="120" />
+        </a>
+        <p class="text-center text-black-50"> &copy; Maharishi international university </p>
+    </footer> -->
+     <script src="../node_modules/angular/angular.js"> </script>
+     <script src="../node_modules/angular-route/angular-route.js"> </script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>-->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>-->
+    <script src="angular-app/app.js"> </script>
+    <script src="angular-app/game-list/game-list-controller.js"> </script>
+    <script src="angular-app/game/game-controller.js"> </script>
+    <script src="angular-app/data-factory/game-data-factory.js"> </script>
+    <script src="angular-app/game-rating-directive/game-rating-directive.js"> </script>
+    <script src="angular-app/create-game/create-game.controller.js"> </script>
+    <script src="angular-app/register/register.controller.js"> </script>
+    <script src="angular-app/login/login.controller.js"> </script>
+    <script src="angular-app/nav-bar/nav-bar.directive.js"> </script>
+</body>
+
+</html>

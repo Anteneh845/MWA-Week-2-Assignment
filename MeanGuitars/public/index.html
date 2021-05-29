@@ -1,0 +1,22 @@
+<!Doctype html>
+<html ng-app="meanGuitars">
+    <head>
+        <title> Guitar Types and Collections </title>
+        <link href="styles/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div ng-include="'nav-bar/nav-bar.html'"></div>
+        <div class="card-body" ng-view> </div>
+        <script src="../node_modules/angular/angular.js"></script>
+        <script src="../node_modules/angular-route/angular-route.js"></script>
+        <script src=""></script>
+        <script src="app/app.js"></script>
+        <script src="app/guitar-data-factory/guitar-data-factory.js"></script>
+        <script src="app/guitar-list/guitar-list.controller.js"></script>
+        <script src="app/add-guitar/add-guitar.controller.js"></script>
+        <script src="app/guitar-detail/guitar-detail.controller.js"></script>
+        <script src="app/login/login.controller.js"></script>
+        <script src="app/register/register.controller.js"></script>
+        <script src="app/custom-directives/guitar-card/guitar-card.directive.js"></script>
+    </body>
+</html>

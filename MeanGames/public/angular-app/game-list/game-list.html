@@ -1,0 +1,7 @@
+<h1> {{gameCtrl.title}}</h1>
+<a class="btn-primary" href="/#/games/new"> Create game</a>
+<ul>
+    <li ng-repeat="game in gameCtrl.games"> 
+        <a href="/#/games/{{game._id}}"> {{game.title}} </a>
+    </li>
+</ul>

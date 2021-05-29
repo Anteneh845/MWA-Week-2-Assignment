@@ -1,0 +1,17 @@
+<h2> Create new game</h2>
+<form name="createGameCtrl.form" ng-submit="createGameCtrl.addGame()" >
+
+    To add a new game please fill in all the fields below:<BR/>
+    Title: <input type="text" name="title" required ng-model="createGameCtrl.newGameTitle" style="color:black"/><BR/>
+    Price: <input type="number" name="price" required ng-model="createGameCtrl.newGamePrice" style="color:black"/><BR/>
+    Year of Publication: <input type="number" name="year" required ng-model="createGameCtrl.newGameYear" style="color:black"/><BR/>
+    Rating: <input type="number" name="rating" required ng-model="createGameCtrl.newGameRating" style="color:black"/><BR/>
+    Minimum Number of Players: <input type="number" name="minPlayers" required ng-model="createGameCtrl.newGameMinPlayers" style="color:black"/>
+    <span ng-show="createGameCtrl.form.minPlayers.$dirty && createGameCtrl.form.minPlayers.$invalid && createGameCtrl.form.isSubmitted" style="color:black">Minimum players must be at least 1.</span>
+    <br/>
+    Maximum Number of Players: <input type="number" name="maxPlayers" required ng-model="createGameCtrl.newGameMaxPlayers" style="color:black"/><BR/>
+    Minimum Recommended Player Age: <input type="number" name="minAge" required ng-model="createGameCtrl.newGameMinAge" style="color:black"/><BR/>
+    Designer name: <input type="text" name="designer" required ng-model="createGameCtrl.newGameDesigner" style="color:black" /><BR/>
+    <button type="submit" class="btn-success">Add Game</button><BR/>
+
+</form>

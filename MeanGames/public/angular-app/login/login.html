@@ -1,0 +1,23 @@
+<form name="loginCtrl.form" class="w-25 m-auto mt-5" ng-submit="loginCtrl.loginHandler()">
+    <h1>
+        Login
+    </h1>
+    <div ng-if="loginCtrl.message" class="alert alert-success mt-3" role="alert">
+        <p> {{loginCtrl.message}}</p>
+    </div>
+    <div ng-if="loginCtrl.errorMessage" class="alert alert-danger mt-3" role="alert">
+        <p> {{loginCtrl.errorMessage}} </p>
+    </div>
+    <div class="form-group mt-3">
+        <label> Username </label>
+        <input type="text" class="form-control" ng-model="loginCtrl.userName" ng-required="true" autocapitalize="none"/>
+    </div>
+    <div class="form-group mt-3">
+        <label> Password </label>
+        <input type="password" class="form-control" ng-model="loginCtrl.password" ng-required="true"
+               autocapitalize="none"/>
+    </div>
+    <div class="form-group mt-3">
+        <button class="btn-primary btn-lg"> Login</button>
+    </div>
+</form>

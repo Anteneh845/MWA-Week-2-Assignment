@@ -1,0 +1,15 @@
+<form>
+    <div class="input-group w-25 m-3">
+        <span class="input-group-text" id="basic-addon1" title="Filter Guitar">  &#x1F50E; </span>
+        <input type="text" name="brand" ng-model="guitarListCtrl.brand" class="form-control" required/>
+        <button class="btn-primary" ng-click="guitarListCtrl.searchHandler()"> Search</button>
+    </div>
+</form>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2" ng-repeat="guitar in guitarListCtrl.guitars">
+            <guitar-card guitar="guitar"></guitar-card>
+        </div>
+    </div>
+</div>

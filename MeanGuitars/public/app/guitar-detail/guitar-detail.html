@@ -1,0 +1,11 @@
+<h1> {{guitarDetailCtrl.guitar.brand}}</h1>
+
+<ul>
+    <li> Guitar type :<b> {{guitarDetailCtrl.guitar.type}} </b></li>
+    <li> String type:  <b>{{guitarDetailCtrl.guitar.stringType}} </b></li>
+    <li> Year : <b> {{guitarDetailCtrl.guitar.year}} </b></li>
+    <li> Full description : <a href="{{guitarDetailCtrl.guitar.link}}"> Click here </a></li>
+    <li> Date Added : <b> {{guitarDetailCtrl.guitar.createdOn | date}} </b></li>
+</ul>
+
+<button ng-click="guitarDetailCtrl.deleteGuitar(guitarDetailCtrl.guitar._id)" class="btn-danger"> Delete Guitar </button>

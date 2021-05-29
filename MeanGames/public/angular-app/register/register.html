@@ -1,0 +1,36 @@
+<form class="w-25 m-auto mt-5" name="registerCtrl.form" ng-submit="registerCtrl.registerHandler()">
+<h1>
+    Register controller
+</h1>
+<div ng-if="registerCtrl.message" class="alert alert-success" role="alert">
+    <p> {{registerCtrl.message}}</p>
+</div>
+<div ng-if="registerCtrl.error" class="alert alert-danger" role="alert">
+    <p> {{registerCtrl.error}} </p>
+</div>
+    <div class="form-group mt-3">
+        <label> Name </label>
+        <input type="text" class="form-control" ng-model="registerCtrl.name" name="name" ng-required="true" autocapitalize="none" ng-maxlength="20" ng-class="{ 'border-danger': registerCtrl.form.firstName.$dirty==true && registerCtrl.form.firstName.$invalid==true}"/>
+        <div ng-if="registerCtrl.form.name.$dirty && registerCtrl.form.name.$invalid" > Name length must not exceed 20 characters</div>
+
+    </div>
+    <div class="form-group mt-3">
+        <label> Username </label>
+        <input type="text" class="form-control" ng-model="registerCtrl.userName" name="userName" ng-required="true" autocapitalize="none" ng-maxlength="20" ng-class="{ 'border-danger': registerCtrl.form.firstName.$dirty==true && registerCtrl.form.firstName.$invalid==true}"/>
+        <div ng-if="registerCtrl.form.userName.$dirty && registerCtrl.form.userName.$invalid" > Username length must not exceed 20 characters</div>
+    </div>
+    <div class="form-group mt-3">
+        <label> Password </label>
+        <input type="password" class="form-control" ng-minlength="8" name="password" ng-model="registerCtrl.password" ng-required="true"
+               autocapitalize="none" ng-class="{ 'border-danger': registerCtrl.form.password.$dirty==true && registerCtrl.form.password.$invalid==true}"/>
+        <div ng-if="registerCtrl.form.password.$dirty && registerCtrl.form.password.$invalid"> Password length must be minimum of 8 characters </div>
+    </div>
+    <div class="form-group mt-3 ">
+        <label> Confirm Password </label>
+        <input type="password" class="form-control" ng-minlength="8" name="confirmPassword" ng-model="registerCtrl.confirmPassword" ng-required="true" autocapitalize="none" ng-class="{ 'border-danger': registerCtrl.form.confirmPassword.$dirty==true && registerCtrl.form.confirmPassword.$invalid==true}"/>
+        <div ng-if="registerCtrl.form.confirmPassword.$dirty && registerCtrl.form.confirmPassword.$invalid" > Password length must be minimum of 8 characters </div>
+    </div>
+    <div class="form-group mt-3">
+        <button class="btn-primary btn-lg"> Register </button>
+    </div>
+</form>
